@@ -1,18 +1,12 @@
-
-
-
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     background-color: rgba(0, 81, 255, 0.428);
-
-    ;
+    overflow: hidden;
+    user-select: none;
 }
 
-.blocHorizontal {
-    color: rgb(255, 255, 255);
-}
 
 .container {
     width: 100vh;
@@ -34,7 +28,7 @@ body {
 }
 
 .slide {
-
+    overflow: hidden;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -42,12 +36,14 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 100px;
+
 }
 
 .blocHorizontal {
 
+    color: rgb(255, 255, 255);
     display: flex;
-    flex-direction: row;
+
     width: 400vw;
     transform: rotate(90deg)translateY(-100vh);
     transform-origin: top left;
@@ -58,74 +54,86 @@ body {
 
 
 
+
 .one {
 
     position: relative;
-    background-color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(195, 195, 195, 1) 50%, rgb(96, 96, 96) 100%);
 }
 
 .two {
+    background: rgb(96, 96, 96);
+    background: linear-gradient(90deg, rgb(96, 96, 96) 0%, rgba(69, 69, 69, 1) 50%, rgb(58, 58, 58) 100%);
+}
 
-    background-color: rgb(37, 37, 37);
+.three {
+    background: rgb(58, 58, 58);
+    background: linear-gradient(90deg, rgb(58, 58, 58) 0%, rgba(33, 33, 33, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
 
-    z-index: 1;
+.four {
+    background-color: rgb(0, 0, 0);
 }
 
 .presentation {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 60px;
+    font-size: 2rem;
     position: absolute;
     top: 1%;
     bottom: auto;
-    max-width: 700px;
+    max-width: 1700px;
     margin: 10px;
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 0px 0px 5px;
 }
 
-.three {
-    background-color: rgb(58, 58, 58);
-}
 
-.four {
-    background-color: rgb(96, 96, 96);
-}
-
-.slide .text-over-image {
-    position: absolute;
-    top: 350px;
-    left: 20vw;
-    right: 0;
-    margin: auto;
-    transform: translate(-50%, -50%);
-    font-size: 65px;
-    color: rgb(18, 24, 78);
-    caret-color: rgb(0, 0, 0);
-}
-
-.fleche:hover,
 .fleche2:hover,
 .flecheretour:hover {
     filter: invert(100%);
+}
 
-
+.fleche:hover {
+    filter: opacity(1);
 }
 
 .fleche,
 .fleche2,
 .flecheretour {
     position: absolute;
-    z-index: 3;
     width: 100px;
-    bottom: 5%;
+    bottom: 2%;
     top: auto;
     right: 18px;
     background: transparent;
+    filter: opacity(0);
+    animation: visible 8s infinite;
+
+
 }
-.fleche{
-    right: 50%;
-    
+
+@keyframes visible {
+    0% {
+        filter: opacity(0);
+    }
+
+    50% {
+        filter: opacity(0.1);
+    }
+
+    100% {
+        filter: opacity(0);
+    }
+
+
+}
+
+.fleche {
+
+    right: 45vw;
+
 }
 
 .flecheretour {
@@ -133,65 +141,16 @@ body {
     left: 18px;
 }
 
-.photoDeMoi {
-    height: 100%;
-}
 
-.bureau {
-    position: absolute;
 
-    width: 100vw;
-    z-index: -1;
 
-}
-
-.bureau::after {
-    content: "";
-    height: 50px;
-    width: 50px;
-    color: blue;
-}
-
-/* @media (max-width: 767px) {
-    .bureau {
-       
-    } */
-.text-over-image {
-    padding: 10px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.text-over-image {
-    animation: text-over-image 1s ease-out both;
-}
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
- @keyframes text-over-image {
-    0% {
-        visibility: hidden;
-      transform: translateY(0);
-      transform-origin: 50% 50%;
-      text-shadow: none;
-    }
-    80% {
-        
-      transform: translateY(-55px);
-      transform-origin: 150% 150%;
-      text-shadow: 0 10px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-    }
 
-    100% {
-        visibility: visible;
-        transform: translateY(-50px);
-        transform-origin: 50% 50%;
-        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-      }
-  }
-  .three{
+.three {
     top: 10%;
-
     align-items: center;
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 35px;
@@ -200,14 +159,133 @@ html {
     text-shadow: rgb(0, 0, 0) 0px 0px 5px;
     justify-content: center;
     align-items: normal;
-  }
+}
 
-  a{
+.liendl {
     color: rgb(222, 163, 13);
-  }
+}
 
-  a:hover{
+.liendl:hover {
     color: darkgoldenrod;
-  }
+}
 
+
+.header {
+    gap: 5px;
+    display: flex;
+
+    position: absolute;
+    z-index: 10;
+    top: 2%;
+    left: 1%;
+    text-align: center;
+    animation: ombre 3s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.menu,
+.lien,
+.contact {
+
+
+
+
+
+    padding-right: 3%;
+    font-size: 30px;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    user-select: none;
+
+
+
+}
+
+#btn {
+    position: relative;
+
+
+    color: black;
+
+}
+
+#btn:hover {
+
+    color: rgb(255, 255, 255);
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.nom {
+
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 8vw;
+    color: #131313;
+    letter-spacing: .15em;
+    animation: ombre 3s ease forwards;
+    opacity: 0;
+}
+
+@keyframes ombre {
+    to {
+        opacity: 1;
+        text-shadow: 1px -1px 0 #767676, 1px 2px 1px #737272, 2px 4px 1px #767474, 3px 6px 1px #787777,
+            4px 8px 1px #7b7a7a, 5px 10px 1px #7f7d7d, 6px 12px 1px #828181, 7px 14px 1px #868585,
+            8px 16px 1px #8b8a89, 9px 18px 1px #8f8e8d, 10px 20px 1px #949392, 11px 22px 1px #999897ce,
+            12px 24px 1px #9e9c9ca9;
+    }
+}
+
+.intitule {
+    font-size: 30px;
+    text-shadow: none;
+}
+
+.etoile {
+    position: relative;
+    background-color: white;
+    display: block;
+    width: 1px;
+    height: 1px;
+    border-radius: 50px;
+}
+
+.etoile1 {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    left: 49%;
+    bottom: -48%;
+}
+
+.etoile2 {
+    position: relative;
+    left: -49%;
+    bottom: 49%;
+}
+
+.openstarwars {
+   
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(187, 255, 0);
+
+    transform: perspective(300px) rotateX(20deg);
  
+}
+
+
+
+.lien2:hover {
+    color: rgb(63, 63, 237);
+}
+
+.logo {
+    width: 30px;
+
+}
