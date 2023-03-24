@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: rgba(0, 81, 255, 0.428);
+    background-color: rgba(255, 255, 255, 0);
     overflow: hidden;
     user-select: none;
 }
