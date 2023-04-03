@@ -1,3 +1,4 @@
+window.addEventListener('load', function() {
 let etoile = document.getElementsByClassName("etoile");
 
 function entierAleatoire(min, max)
@@ -12,4 +13,5 @@ for (let i = 0; i < etoile.length; i++) {
   
 };
 console.log(etoile.length);
+});
 
