@@ -1,22 +1,29 @@
+*{
+    border:1px solid #ffffff00;
+}
+
 body {
     position: relative;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: rgb(255, 0, 0);
-    overflow: hidden;
     user-select: none;
-    z-index: -10;
+    overflow-y: scroll;
+    overflow: hidden;
+        min-width: 100%;
+    min-height: 100%;
 }
 
 
 .container {
+    position: relative;
+    z-index: 10;
     width: 100vh;
     height: 100vw;
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
     overflow-x: hidden;
-
+    
 }
 
 ::-webkit-scrollbar {
@@ -42,7 +49,7 @@ body {
 }
 
 .blocHorizontal {
-
+    z-index: 50;
     color: rgb(255, 255, 255);
     display: flex;
 
@@ -65,7 +72,7 @@ body {
 }
 
 .two {
-    background: rgb(96, 96, 96);
+   
     background: linear-gradient(90deg, rgb(96, 96, 96) 0%, rgba(69, 69, 69, 1) 50%, rgb(58, 58, 58) 100%);
 }
 
@@ -76,15 +83,16 @@ body {
 
 .four {
     background-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 
 .presentation {
+    position: relative;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    justify-content: center;
     font-size: 2rem;
     position: absolute;
-    top: 1%;
-    bottom: auto;
     max-width: 1700px;
     margin: 10px;
     color: rgb(255, 255, 255);
@@ -92,10 +100,7 @@ body {
 }
 
 
-.fleche2:hover,
-.flecheretour:hover {
-    filter: invert(100%);
-}
+
 
 .fleche:hover {
     filter: opacity(1);
@@ -103,6 +108,8 @@ body {
 
 .fleche,
 .fleche2,
+.fleche3,
+.fleche4,
 .flecheretour {
     position: absolute;
     width: 100px;
@@ -142,8 +149,32 @@ body {
     rotate: 180deg;
     left: 18px;
 }
+.fleche3{
+    animation: visible2 8s infinite;
+}
+.fleche4{
+  
+    filter: invert(100%);
+    rotate: 180deg;
+    left: 18px;
+    animation: visible2 8s infinite;
+}
+
+@keyframes visible2 {
+    0% {
+        filter: invert(100%);
+    }
+
+    50% {
+        filter: invert(0%);
+    }
+
+    100% {
+        filter: invert(100%);
+    }
 
 
+}
 
 
 html {
@@ -152,15 +183,16 @@ html {
 
 
 .three {
-    top: 10%;
-    align-items: center;
+   
+   
     font-family: Geneva, Tahoma, sans-serif;
     font-size: 3rem;
-    text-align: center;
+ 
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 0px 0px 5px;
-    justify-content: center;
-    align-items: normal;
+    
+    align-items: center;
+  
 }
 
 .liendl {
@@ -175,7 +207,7 @@ html {
 .header {
     gap: 5px;
     display: flex;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 2%;
     left: 1%;
@@ -230,6 +262,7 @@ a {
     letter-spacing: .15em;
     animation: ombre 3s ease forwards;
     opacity: 0;
+
 }
 
 @keyframes ombre {
