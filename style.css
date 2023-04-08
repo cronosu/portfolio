@@ -1,9 +1,10 @@
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 1300px) {
     * {
         border: 1px solid #ffffff00;
     }
-  }
+}
+
 body {
     position: relative;
     margin: 0;
@@ -63,21 +64,19 @@ body {
 
 
 
-
-
 .one {
 
-    
+
     background-color: #c3c3c3;
 }
 
 .two {
 
-    background: linear-gradient(90deg, rgb(184, 184, 184) 0%, rgba(69, 69, 69, 1) 50%, rgb(58, 58, 58) 100%);
+    background: linear-gradient(90deg, rgb(184, 184, 184) 0%, rgb(58, 58, 58) 100%);
 }
 
 .three {
-   
+
     background: linear-gradient(90deg, rgb(58, 58, 58) 0%, rgba(33, 33, 33, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
@@ -217,8 +216,8 @@ html {
     animation: ombre 3s ease forwards;
     animation-delay: 2s;
     opacity: 0;
-  }
-  
+}
+
 
 .menu,
 .lien,
