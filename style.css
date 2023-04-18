@@ -1,8 +1,8 @@
-/*@media (max-width: 1300px) {
+@media (max-width: 1300px) {
     * {
         border: 1px solid #ffffff00;
     }
-}*/
+};
 
 * {
     margin: 0;
