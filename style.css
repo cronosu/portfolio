@@ -242,8 +242,10 @@ html {
 
 @media (max-width: 1000px) {
     .header {
+       
         gap: 70px;
         font-size: 2rem;
+        bottom: -60%;
     }
 }
 .menu,
