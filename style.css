@@ -24,7 +24,7 @@ body {
 
 .container {
     position: relative;
-    z-index: 10;
+   
     width: 100vh;
     height: 100vw;
     transform: rotate(-90deg) translateX(-100vh);
@@ -37,11 +37,7 @@ body {
     display: none;
 }
 
-@media (max-width: 767px) {
-    .slide.two {
-        margin-top: 0;
-    }
-}
+
 
 .slide {
     overflow: hidden;
@@ -56,7 +52,7 @@ body {
 }
 
 .blocHorizontal {
-    z-index: 50;
+ 
    
     display: flex;
     width: 400vw;
@@ -83,7 +79,9 @@ body {
 
     background: linear-gradient(90deg, rgb(58, 58, 58) 0%, rgba(33, 33, 33, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
-
+.lienUtile{
+z-index: 10;
+}
 .four {
     background-color: rgb(0, 0, 0);
     overflow: hidden;
@@ -198,6 +196,7 @@ html {
 
 .liendl {
     color: rgb(222, 163, 13);
+ 
 }
 
 .liendl:hover {
@@ -211,7 +210,7 @@ html {
     position: fixed;
     top: 2%;
     left: auto;
-    z-index: 10;
+   
     text-align: center;
     animation: ombre 3s ease forwards;
     animation-delay: 2s;
@@ -233,19 +232,21 @@ html {
     color: white;
 
 }
-.header4:hover {
+
+.header3:hover {
     color: rgb(93, 93, 93);
 }
-.header3:hover {
+.header4:hover {
     color: rgb(93, 93, 93);
 }
 
 @media (max-width: 1000px) {
     .header {
-       
+      
         gap: 70px;
         font-size: 2rem;
         bottom: -60%;
+        
     }
 }
 .menu,
@@ -264,9 +265,7 @@ html {
     color: rgb(255, 255, 255);
 }
 
-.header4:hover {
-    color: rgb(93, 93, 93);
-}
+
 
 a {
     color: inherit;
