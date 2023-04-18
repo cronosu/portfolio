@@ -1,20 +1,24 @@
-@media (max-width: 1300px) {
+/*@media (max-width: 1300px) {
     * {
         border: 1px solid #ffffff00;
     }
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+
 }
 
 body {
     position: relative;
-    margin: 0;
-    padding: 0;
     font-family: sans-serif;
     user-select: none;
     overflow-x: scroll;
     overflow: hidden;
     min-width: 100%;
     min-height: 100%;
-
+    overflow: hidden;
 }
 
 
@@ -93,9 +97,10 @@ body {
     font-size: 2rem;
     position: absolute;
     max-width: 1700px;
-    margin: 10px;
+    margin: 100px;
     color: rgb(255, 255, 255);
-    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;*
+    
 }
 
 
@@ -184,13 +189,9 @@ html {
 
 
 .three {
-
-    font-family: Geneva, Tahoma, sans-serif;
     font-size: 3rem;
-
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 0px 0px 5px;
-
     align-items: center;
 
 }
@@ -205,42 +206,64 @@ html {
 
 
 .header {
+    color: black;
     display: flex;
     position: fixed;
     top: 2%;
-    left: 1%;
+    left: auto;
     z-index: 10;
-    gap: 5px;
-    display: flex;
     text-align: center;
     animation: ombre 3s ease forwards;
     animation-delay: 2s;
     opacity: 0;
+    font-size: 3rem;
+    gap: 100px;
+    transition: all 0.8s ease-out;
+    align-items: center;
 }
 
-@media (max-width: 700px) {
+
+.header2
+ {
+    left: auto;
+}
+
+.header4,.header3 {
+    left: auto;
+    color: white;
+
+}
+.header4:hover {
+    color: rgb(93, 93, 93);
+}
+.header3:hover {
+    color: rgb(93, 93, 93);
+}
+
+@media (max-width: 1000px) {
     .header {
-        display: flex;
-        flex-direction: column;
+        gap: 70px;
+        font-size: 2rem;
     }
 }
-
 .menu,
 .lien,
 .contact {
-    padding-right: 3%;
-    font-size: 3rem;
     text-shadow: rgb(0, 0, 0) 0px 0px 5px;
     user-select: none;
 }
 
-#btn {
-    position: relative;
-    color: black;
+.onPage{
+   
+    text-decoration: underline;
 }
 
 #btn:hover {
     color: rgb(255, 255, 255);
+}
+
+.header4:hover {
+    color: rgb(93, 93, 93);
 }
 
 a {
@@ -302,22 +325,26 @@ a {
     text-align: center;
     font-size: 3rem;
     color: rgb(187, 255, 0);
-
+    transition: all 0.5s ease-out;
     transform: perspective(300px) rotateX(33deg);
 
 }
 
 
 @media (max-width: 1120px) {
-    .openstarwars ,.presentation {
-        font-size: 35px;
+
+    .openstarwars,
+    .presentation {
+        font-size: 30px;
     }
 
 }
-@media(orientation: landscape) {
-    .openstarwars ,.presentation {
-        font-size: 20px;
-    }
+
+@media (orientation: landscape) and (max-width: 1120px) {
+  .openstarwars,
+  .presentation {
+    font-size: 16px;
+  }
 }
 
 
