@@ -57,7 +57,7 @@ body {
 
 .blocHorizontal {
     z-index: 50;
-    color: rgb(255, 255, 255);
+   
     display: flex;
     width: 400vw;
     transform: rotate(90deg)translateY(-100vh);
